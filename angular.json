@@ -130,6 +130,8 @@
       "architect": {
         "build": {
           "builder": "ngx-build-plus:browser",
+          "extraWebpackConfig": "webpack.externals.js",
+          "singleBundle": true,
           "options": {
             "outputPath": "dist/sd1",
             "index": "projects/sd1/src/index.html",
@@ -248,6 +250,8 @@
       "architect": {
         "build": {
           "builder": "ngx-build-plus:browser",
+          "extraWebpackConfig": "webpack.externals.js",
+          "singleBundle": true,
           "options": {
             "outputPath": "dist/sd2",
             "index": "projects/sd2/src/index.html",
