@@ -21,7 +21,47 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/bundles/*",
+                "input": "node_modules/@angular/",
+                "output": "/assets/angular"
+              },
+              {
+                "glob": "dist/*.js",
+                "input": "node_modules/zone.js/",
+                "output": "/assets/zone-js/"
+              },
+              {
+                "glob": "*.js",
+                "input": "node_modules/tslib/",
+                "output": "/assets/tslib"
+              },
+              {
+                "glob": "*.js",
+                "input": "node_modules/@webcomponents/custom-elements/",
+                "output": "/assets/custom-elements"
+              },
+              {
+                "glob": "src/*.js",
+                "input": "node_modules/@webcomponents/custom-elements/",
+                "output": "/assets/custom-elements"
+              },
+              {
+                "glob": "*.js",
+                "input": "node_modules/@webcomponents/webcomponentsjs/",
+                "output": "/assets/webcomponentsjs"
+              },
+              {
+                "glob": "bundles/*",
+                "input": "node_modules/rxjs/",
+                "output": "/assets/rxjs"
+              },
+              {
+                "glob": "client/*.js",
+                "input": "node_modules/core-js/",
+                "output": "/assets/core-js"
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -130,9 +170,9 @@
       "architect": {
         "build": {
           "builder": "ngx-build-plus:browser",
-          "extraWebpackConfig": "webpack.externals.js",
-          "singleBundle": true,
           "options": {
+            "extraWebpackConfig": "webpack.externals.js",
+            "singleBundle": true,
             "outputPath": "dist/sd1",
             "index": "projects/sd1/src/index.html",
             "main": "projects/sd1/src/main.ts",
@@ -250,9 +290,9 @@
       "architect": {
         "build": {
           "builder": "ngx-build-plus:browser",
-          "extraWebpackConfig": "webpack.externals.js",
-          "singleBundle": true,
           "options": {
+            "extraWebpackConfig": "webpack.externals.js",
+            "singleBundle": true,
             "outputPath": "dist/sd2",
             "index": "projects/sd2/src/index.html",
             "main": "projects/sd2/src/main.ts",

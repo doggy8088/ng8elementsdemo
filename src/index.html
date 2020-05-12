@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Demo1</title>
@@ -7,7 +8,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
   <app-root></app-root>
+
+  <!-- core-js for legacy browsers -->
+  <script src="assets/core-js/client/core.js"></script>
+  <!-- Zone.js -->
+  <!--
+      Consider excluding zone.js when creating
+      custom Elements by using the noop zone.
+      -->
+  <script src="assets/zone-js/dist/zone.js"></script>
+  <!-- Polyfills for Browsers supporting
+      Custom Elements. Needed b/c we downlevel
+      to ES5. See: @webcomponents/custom-elements
+    -->
+  <script src="assets/custom-elements/src/native-shim.js"></script>
+  <!-- Web Components polyfills -->
+  <script src="assets/webcomponentsjs/webcomponents-bundle.js" nomodule></script>
+  <!-- RxJS -->
+  <script src="assets/rxjs/bundles/rxjs.umd.js"></script>
+  <script src="assets/zone-js/dist/zone-patch-rxjs.js"></script>
+  <!-- Angular Packages -->
+  <script src="assets/angular/core/bundles/core.umd.js"></script>
+  <script src="assets/angular/common/bundles/common.umd.js"></script>
+  <script src="assets/angular/compiler/bundles/compiler.umd.js"></script>
+  <script src="assets/angular/platform-browser/bundles/platform-browser.umd.js"></script>
+  <script src="assets/angular/elements/bundles/elements.umd.js"></script>
+  <script src="assets/angular/forms/bundles/forms.umd.js"></script>
 </body>
+
 </html>
