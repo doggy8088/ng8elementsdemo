@@ -129,7 +129,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/sd1",
             "index": "projects/sd1/src/index.html",
@@ -179,7 +179,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "sd1:build"
           },
@@ -196,7 +196,7 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "ngx-build-plus:karma",
           "options": {
             "main": "projects/sd1/src/test.ts",
             "polyfills": "projects/sd1/src/polyfills.ts",
@@ -247,7 +247,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/sd2",
             "index": "projects/sd2/src/index.html",
@@ -297,7 +297,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "sd2:build"
           },
@@ -314,7 +314,7 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "ngx-build-plus:karma",
           "options": {
             "main": "projects/sd2/src/test.ts",
             "polyfills": "projects/sd2/src/polyfills.ts",
@@ -356,6 +356,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "demo1"
 }
