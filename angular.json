@@ -168,7 +168,7 @@
           "options": {
             "extraWebpackConfig": "webpack.externals.js",
             "singleBundle": true,
-            "outputPath": "dist/sd1",
+            "outputPath": "dist/demo1/sd1",
             "index": "projects/sd1/src/index.html",
             "main": "projects/sd1/src/main.ts",
             "polyfills": "projects/sd1/src/polyfills.ts",
@@ -283,7 +283,7 @@
           "options": {
             "extraWebpackConfig": "webpack.externals.js",
             "singleBundle": true,
-            "outputPath": "dist/sd2",
+            "outputPath": "dist/demo1/sd2",
             "index": "projects/sd2/src/index.html",
             "main": "projects/sd2/src/main.ts",
             "polyfills": "projects/sd2/src/polyfills.ts",
