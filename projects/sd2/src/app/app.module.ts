@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injector } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { createCustomElement } from '@angular/elements';
 
 @NgModule({
   declarations: [
@@ -13,4 +14,9 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private injector: Injector) {
+    const customElement = createCustomElement(AppComponent, { injector });
+    customElements.define('app-sd2', customElement);
+  }
+}
