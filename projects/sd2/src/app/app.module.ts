@@ -12,7 +12,7 @@ import { createCustomElement } from '@angular/elements';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [AppComponent]
 })
 export class AppModule {
   constructor(private injector: Injector) {
