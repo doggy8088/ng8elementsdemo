@@ -4,16 +4,16 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## 測試方法
 
-1. 安裝 `serve` 套件
+1. 安裝套件
 
     ```sh
-    npm i -g serve
+    npm install
     ```
 
 2. 建置與預覽
 
     ```sh
-    ng build --prod && ng build --prod --project=sd1 && ng build --prod --project=sd2 && serve -s dist\demo1
+    npm run build
     ```
 
     連到 <http://localhost:5000/> 進行測試！
